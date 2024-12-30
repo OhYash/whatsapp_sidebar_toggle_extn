@@ -20,7 +20,6 @@ function injectToggleButton() {
       console.log("Button already added");
       return;
     }
-    console.log("Injecting toggle button");
     // Check if button is not already added
     // Create the toggle button with an arrow
     const toggleButton = document.createElement("button");
@@ -40,7 +39,6 @@ function injectToggleButton() {
       '[aria-label="Status"]',
     ).parentElement;
     if (statusButton) {
-      console.log("Status button found");
       statusButton.parentNode.insertBefore(container, statusButton);
       // Attach event listener
       toggleButton.addEventListener("click", toggleSidebar);
@@ -48,10 +46,7 @@ function injectToggleButton() {
       console.log("Status button not found");
       return;
     }
-  } else {
-    console.log("no header");
   }
-  console.log("Button added");
 }
 
 // Set the interval to check for the UI elements
